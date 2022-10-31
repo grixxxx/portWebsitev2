@@ -1,0 +1,186 @@
+@forward "./resets";
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+@forward "./media-queries";
+@forward "./cards";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $primaryClr;
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23e7ecef' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+  color: $secondaryClr;
+  font-family: trap-regular;
+}
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.082);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  padding-block: 1.9942rem;
+  backdrop-filter: blur(4px);
+}
+
+section {
+  @include paddingsection;
+  @include flex;
+  line-height: $lineHeight;
+  align-items: flex-start;
+
+  .section-title {
+    @include sectionTitle;
+    width: 200px;
+  }
+}
+
+li > a {
+  font-family: trap-medium;
+  color: $secondaryClr;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    background-color: $accentClr;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    position: absolute;
+    transition: width 0.6s cubic-bezier(0.15, 1, 0.4, 1);
+  }
+
+  &:hover,
+  &:focus {
+    color: $accentClr;
+
+    &::before {
+      width: 100%;
+      right: auto;
+    }
+  }
+}
+
+ul {
+  @include flex;
+}
+
+nav {
+  @include flex;
+  justify-content: space-between;
+  padding-inline: $paddinginlinesection;
+  position: sticky;
+}
+
+.sm-item {
+  font-size: $fontlrg;
+}
+
+main {
+  @include flex;
+  @include paddingsection;
+  flex-direction: column;
+  user-select: none;
+
+  .main-container {
+    width: $sectionContainerWidth;
+  }
+
+  .main-top-text {
+    font-size: clamp($fontsmll, 2vw, $fontlrg);
+    font-family: trap-thin;
+    opacity: $opacity50;
+  }
+
+  .main-title {
+    font-size: clamp(1.4rem, 5vw, $fontxlrg);
+    font-family: trap-bold;
+    position: relative;
+
+    img {
+      max-width: min(1.5rem, 2.5%);
+    }
+  }
+
+  .main-title-pos {
+    font-size: clamp($fontsmll, 2vw, $fontlrg);
+    font-family: trap-bold;
+    line-height: $lineHeight;
+  }
+
+  .main-bottom-text {
+    max-width: 21.875rem;
+    line-height: $lineHeight;
+    opacity: $opacity50;
+    font-family: trap-thin;
+    font-size: $fontsmll;
+  }
+}
+
+.about {
+  .about-container {
+    width: $sectionContainerWidth;
+  }
+  .about-title {
+    font-family: trap-bold;
+    font-size: clamp($fontsmll, 5vw, $fontlrg);
+    max-width: 35rem;
+    margin-bottom: $gap;
+  }
+
+  .about-text {
+    font-size: $fontsmll;
+    opacity: $opacity50;
+  }
+
+  .open-modal {
+    background: transparent;
+    border: none;
+    color: $secondaryClr;
+    font-size: $fontmdm;
+    padding-block: $gap;
+    font-family: trap-thin;
+    cursor: pointer;
+
+    &:hover {
+      color: $accentClr;
+    }
+  }
+
+  .modal-dialog {
+    position: relative;
+
+    img {
+      max-width: 100%;
+    }
+    button {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+  .modal-dialog::backdrop {
+    background: $accentClr;
+    opacity: 0.4;
+  }
+}
+
+.project-container {
+  display: flex;
+  width: $sectionContainerWidth;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: trap-bold;
+  src: url(/font/Trap-Bold.otf);
+}
+
+@font-face {
+  font-family: trap-medium;
+  src: url(/font/Trap-Medium.otf);
+}
+
+@font-face {
+  font-family: trap-regular;
+  src: url(/font/Trap-Regular.otf);
+}
+
+@font-face {
+  font-family: trap-thin;
+  src: url(/font/Trap-Light.otf);
+}
+
+$fontsmll: clamp(0.7rem, 3vw, 0.9375rem);
+$fontmdm: 1.25rem;
+$fontlrg: 1.606875rem;
+$fontxlrg: 3.905625rem;
+
+$lineHeight: 1.5;

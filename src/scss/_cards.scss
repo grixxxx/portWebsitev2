@@ -1,0 +1,20 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+.card {
+  max-width: 200px;
+  background-color: $primaryClr;
+  padding: $gap;
+  border-radius: 10px;
+  box-shadow: 1.5px 1.5px 10px rgba(255, 255, 255, 0.034);
+
+  .card-title {
+    font-family: trap-bold;
+    font-size: $fontmdm;
+  }
+
+  .card--text {
+    font-size: $fontsmll;
+    opacity: $opacity50;
+  }
+}

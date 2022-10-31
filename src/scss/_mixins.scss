@@ -1,0 +1,18 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin paddingsection {
+  padding-block: $paddingblocksection;
+  padding-inline: $paddinginlinesection;
+}
+
+@mixin sectionTitle {
+  font-family: trap-bold;
+  font-size: clamp($fontsmll, 5vw, $fontlrg);
+}

@@ -1,0 +1,61 @@
+@use "./variables" as *;
+
+@media (width > 37.5rem) {
+  .main-bottom-text {
+    align-self: flex-end;
+    text-align: end;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    flex-direction: column;
+  }
+
+  .menu-bar {
+    display: block;
+    color: $secondaryClr;
+    font-size: 1.5rem;
+
+    &:hover,
+    &:focus {
+      color: $accentClr;
+    }
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: -1500%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    transition: 1s ease-in-out;
+    padding-top: 2rem;
+    z-index: -1;
+
+    & > li {
+      padding-bottom: 2rem;
+    }
+
+    &.active {
+      top: 60px;
+    }
+  }
+}
+@media (width > 600px) {
+  .project {
+    flex-direction: row-reverse;
+
+    .section-title {
+      text-align: end;
+    }
+  }
+  .menu-bar {
+    display: none;
+  }
+}
