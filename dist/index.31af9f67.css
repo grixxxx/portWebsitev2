@@ -103,6 +103,14 @@ li > a {
   .primary-nav.active {
     top: 60px;
   }
+
+  main .main-container > * {
+    margin-bottom: .5rem;
+  }
+
+  .contact-container {
+    text-align: center;
+  }
 }
 
 @media (min-width: 600.001px) {
@@ -127,6 +135,10 @@ li > a {
   box-shadow: 1.5px 1.5px 10px #ffffff09;
 }
 
+.card > :not(.card--link) {
+  margin-bottom: .5rem;
+}
+
 .card .card-title {
   font-family: trap-bold;
   font-size: 1.25rem;
@@ -135,6 +147,24 @@ li > a {
 .card .card--text {
   opacity: .2;
   font-size: clamp(.7rem, 3vw, .9375rem);
+}
+
+.card .card--link {
+  position: relative;
+}
+
+.card .card--link a {
+  color: #e7ecef;
+  margin-right: 1.5rem;
+  transition: color .3s;
+}
+
+.card .card--link a:hover {
+  color: #0f7173;
+}
+
+.card .card--link i {
+  font-size: 1.25rem;
 }
 
 html {
@@ -282,21 +312,24 @@ main .main-bottom-text {
 
 .about .about-text {
   opacity: .2;
+  margin-bottom: 1.5rem;
   font-size: clamp(.7rem, 3vw, .9375rem);
 }
 
 .about .open-modal {
   color: #e7ecef;
   cursor: pointer;
-  background: none;
+  background-color: #0f7173;
   border: none;
-  padding-block: 1.5rem;
+  padding: .8rem 1.5rem;
   font-family: trap-thin;
-  font-size: 1.25rem;
+  font-size: clamp(.7rem, 3vw, .9375rem);
+  transition: all .3s ease-in;
 }
 
 .about .open-modal:hover {
   color: #0f7173;
+  box-shadow: inset 20em 0 #e7ecef;
 }
 
 .about .modal-dialog {
@@ -324,6 +357,42 @@ main .main-bottom-text {
   justify-content: center;
   gap: 2rem;
   display: flex;
+}
+
+.contact-container {
+  width: min(840px, 100%);
+}
+
+.contact-container .contact-title {
+  max-width: 35rem;
+  margin-bottom: 1.5rem;
+  font-family: trap-bold;
+  font-size: clamp(clamp(.7rem, 3vw, .9375rem), 5vw, 1.60688rem);
+}
+
+.contact-container .contact-text {
+  max-width: 36rem;
+  font-size: clamp(.7rem, 3vw, .9375rem);
+}
+
+.contact-container > :not(button) {
+  margin-bottom: 1.5rem;
+}
+
+.contact-container button {
+  color: #e7ecef;
+  cursor: pointer;
+  background-color: #0f7173;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: trap-thin;
+  font-size: clamp(40%, 4vw, 1.60688rem);
+  transition: all .5s ease-in-out;
+}
+
+.contact-container button:hover, .contact-container button:focus {
+  color: #0f7173;
+  box-shadow: inset 14.5em 0 #e7ecef;
 }
 
 /*# sourceMappingURL=index.31af9f67.css.map */

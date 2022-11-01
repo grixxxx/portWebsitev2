@@ -46,6 +46,14 @@
       top: 60px;
     }
   }
+
+  main .main-container > * {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-container {
+    text-align: center;
+  }
 }
 @media (width > 600px) {
   .project {

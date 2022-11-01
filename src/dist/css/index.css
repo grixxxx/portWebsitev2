@@ -188,6 +188,12 @@ li > a {
   .primary-nav.active {
     top: 60px;
   }
+  main .main-container > * {
+    margin-bottom: 0.5rem;
+  }
+  .contact-container {
+    text-align: center;
+  }
 }
 @media (width > 600px) {
   .project {
@@ -207,6 +213,9 @@ li > a {
   border-radius: 10px;
   box-shadow: 1.5px 1.5px 10px rgba(255, 255, 255, 0.034);
 }
+.card > *:not(.card--link) {
+  margin-bottom: 0.5rem;
+}
 .card .card-title {
   font-family: trap-bold;
   font-size: 1.25rem;
@@ -214,6 +223,20 @@ li > a {
 .card .card--text {
   font-size: clamp(0.7rem, 3vw, 0.9375rem);
   opacity: 20%;
+}
+.card .card--link {
+  position: relative;
+}
+.card .card--link a {
+  color: #e7ecef;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+.card .card--link a:hover {
+  color: #0f7173;
+}
+.card .card--link i {
+  font-size: 1.25rem;
 }
 
 html {
@@ -351,17 +374,20 @@ main .main-bottom-text {
 .about .about-text {
   font-size: clamp(0.7rem, 3vw, 0.9375rem);
   opacity: 20%;
+  margin-bottom: 1.5rem;
 }
 .about .open-modal {
-  background: transparent;
-  border: none;
   color: #e7ecef;
-  font-size: 1.25rem;
-  padding-block: 1.5rem;
+  background-color: #0f7173;
+  border: none;
   font-family: trap-thin;
   cursor: pointer;
+  font-size: clamp(0.7rem, 3vw, 0.9375rem);
+  padding: 0.8rem 1.5rem;
+  transition: 0.3s ease-in;
 }
 .about .open-modal:hover {
+  box-shadow: inset 20em 0 0 0 #e7ecef;
   color: #0f7173;
 }
 .about .modal-dialog {
@@ -386,6 +412,37 @@ main .main-bottom-text {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.contact-container {
+  width: min(840px, 100%);
+}
+.contact-container .contact-title {
+  font-family: trap-bold;
+  font-size: clamp(clamp(0.7rem, 3vw, 0.9375rem), 5vw, 1.606875rem);
+  max-width: 35rem;
+  margin-bottom: 1.5rem;
+}
+.contact-container .contact-text {
+  max-width: 36rem;
+  font-size: clamp(0.7rem, 3vw, 0.9375rem);
+}
+.contact-container > *:not(button) {
+  margin-bottom: 1.5rem;
+}
+.contact-container button {
+  color: #e7ecef;
+  background-color: #0f7173;
+  border: none;
+  font-family: trap-thin;
+  cursor: pointer;
+  font-size: clamp(40%, 4vw, 1.606875rem);
+  padding: 1rem 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.contact-container button:hover, .contact-container button:focus {
+  box-shadow: inset 14.5em 0 0 0 #e7ecef;
+  color: #0f7173;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -134,27 +134,21 @@ main {
     width: $sectionContainerWidth;
   }
   .about-title {
-    font-family: trap-bold;
-    font-size: clamp($fontsmll, 5vw, $fontlrg);
-    max-width: 35rem;
-    margin-bottom: $gap;
+    @include sectionContentTitle;
   }
 
   .about-text {
-    font-size: $fontsmll;
-    opacity: $opacity50;
+    @include sectionContentText;
   }
 
   .open-modal {
-    background: transparent;
-    border: none;
-    color: $secondaryClr;
-    font-size: $fontmdm;
-    padding-block: $gap;
-    font-family: trap-thin;
-    cursor: pointer;
+    @include sectionBtn;
+    font-size: $fontsmll;
+    padding: 0.8rem 1.5rem;
+    transition: 0.3s ease-in;
 
     &:hover {
+      box-shadow: inset 20em 0 0 0 $secondaryClr;
       color: $accentClr;
     }
   }
@@ -183,4 +177,33 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.contact-container {
+  width: $sectionContainerWidth;
+
+  .contact-title {
+    @include sectionContentTitle;
+  }
+  .contact-text {
+    max-width: 36rem;
+    font-size: $fontsmll;
+  }
+
+  & > *:not(button) {
+    margin-bottom: $gap;
+  }
+
+  button {
+    @include sectionBtn;
+    font-size: clamp(40%, 4vw, $fontlrg);
+    padding: 1rem 2rem;
+    transition: all 0.5s ease-in-out;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 14.5em 0 0 0 $secondaryClr;
+      color: $accentClr;
+    }
+  }
 }
