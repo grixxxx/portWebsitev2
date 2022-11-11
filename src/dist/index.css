@@ -257,6 +257,7 @@ body {
 
 .scroll-up header {
   box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.082);
+  padding-block: 1rem;
 }
 
 header {

@@ -15,6 +15,8 @@ body {
 
   color: $secondaryClr;
   font-family: trap-regular;
+
+  cursor: url("../../assets/path789.svg"), auto;
 }
 
 .scroll-down header {
@@ -23,6 +25,7 @@ body {
 
 .scroll-up header {
   box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.082);
+  padding-block: 1rem;
 }
 
 header {
@@ -199,10 +202,11 @@ main {
     font-size: clamp(40%, 4vw, $fontlrg);
     padding: 1rem 2rem;
     transition: all 0.5s ease-in-out;
+    font-family: trap-medium;
 
     &:hover,
     &:focus {
-      box-shadow: inset 14.5em 0 0 0 $secondaryClr;
+      box-shadow: inset 15em 0 0 0 $secondaryClr;
       color: $accentClr;
     }
   }

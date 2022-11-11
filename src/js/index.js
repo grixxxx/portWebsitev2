@@ -35,14 +35,13 @@ window.addEventListener("scroll", () => {
   console.log(currentScroll);
 });
 
-const primaryNav = document.querySelector(".primary-nav");
+const primaryNav = document.getElementById("primary-nav");
 const menuBar = document.querySelector(".menu-bar");
-const primaryNavItem = document.querySelector(".primary-nav-item");
 
 menuBar.addEventListener("click", () => {
   primaryNav.classList.toggle("active");
 });
 
-primaryNavItem.addEventListener("click", () => {
-  primaryNav.classList.remove("active");
+primaryNav.addEventListener("click", () => {
+  primaryNav.classList.toggle("active");
 });

@@ -146,7 +146,7 @@ li > a {
 
 .card .card--text {
   opacity: .2;
-  font-size: clamp(.7rem, 3vw, .9375rem);
+  font-size: .9rem;
 }
 
 .card .card--link {
@@ -173,6 +173,7 @@ html {
 
 body {
   color: #e7ecef;
+  cursor: url("path789.8f3b9ad9.svg"), auto;
   background-color: #272932;
   background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23e7ecef' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
   font-family: trap-regular;
@@ -385,14 +386,14 @@ main .main-bottom-text {
   background-color: #0f7173;
   border: none;
   padding: 1rem 2rem;
-  font-family: trap-thin;
+  font-family: trap-medium;
   font-size: clamp(40%, 4vw, 1.60688rem);
   transition: all .5s ease-in-out;
 }
 
 .contact-container button:hover, .contact-container button:focus {
   color: #0f7173;
-  box-shadow: inset 14.5em 0 #e7ecef;
+  box-shadow: inset 15em 0 #e7ecef;
 }
 
 /*# sourceMappingURL=index.31af9f67.css.map */
