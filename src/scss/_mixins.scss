@@ -16,3 +16,24 @@
   font-family: trap-bold;
   font-size: clamp($fontsmll, 5vw, $fontlrg);
 }
+
+@mixin sectionContentTitle {
+  font-family: trap-bold;
+  font-size: clamp($fontsmll, 5vw, $fontlrg);
+  max-width: 35rem;
+  margin-bottom: $gap;
+}
+
+@mixin sectionContentText {
+  font-size: $fontsmll;
+  opacity: $opacity50;
+  margin-bottom: $gap;
+}
+
+@mixin sectionBtn {
+  color: $secondaryClr;
+  background-color: $accentClr;
+  border: none;
+  font-family: trap-thin;
+  cursor: pointer;
+}

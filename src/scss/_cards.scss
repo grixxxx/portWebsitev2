@@ -8,13 +8,35 @@
   border-radius: 10px;
   box-shadow: 1.5px 1.5px 10px rgba(255, 255, 255, 0.034);
 
+  & > *:not(.card--link) {
+    margin-bottom: 0.5rem;
+  }
+
   .card-title {
     font-family: trap-bold;
     font-size: $fontmdm;
   }
 
   .card--text {
-    font-size: $fontsmll;
+    font-size: 0.9rem;
     opacity: $opacity50;
+  }
+
+  .card--link {
+    position: relative;
+
+    a {
+      color: $secondaryClr;
+      margin-right: $gap;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $accentClr;
+      }
+    }
+
+    i {
+      font-size: $fontmdm;
+    }
   }
 }
