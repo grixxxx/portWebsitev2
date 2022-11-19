@@ -39,22 +39,22 @@ li > a {
 
 @font-face {
   font-family: trap-bold;
-  src: url("Trap-Bold.14be304d.otf");
+  src: url("Trap-Bold.07b2f746.otf");
 }
 
 @font-face {
   font-family: trap-medium;
-  src: url("Trap-Medium.c8686747.otf");
+  src: url("Trap-Medium.883eddc3.otf");
 }
 
 @font-face {
   font-family: trap-regular;
-  src: url("Trap-Regular.152e6144.otf");
+  src: url("Trap-Regular.68a58491.otf");
 }
 
 @font-face {
   font-family: trap-thin;
-  src: url("Trap-Light.e20dc2d9.otf");
+  src: url("Trap-Light.389eb60e.otf");
 }
 
 @media (min-width: calc(37.5rem + .001px)) {
@@ -173,10 +173,11 @@ html {
 
 body {
   color: #e7ecef;
-  cursor: url("path789.8f3b9ad9.svg"), auto;
   background-color: #272932;
   background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23e7ecef' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
   font-family: trap-regular;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .scroll-down header {
@@ -184,6 +185,7 @@ body {
 }
 
 .scroll-up header {
+  padding-block: 1rem;
   box-shadow: 1px 1px 20px #ffffff15;
 }
 
@@ -295,13 +297,21 @@ main .main-title-pos {
 main .main-bottom-text {
   max-width: 21.875rem;
   opacity: .2;
+  clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
+  opacity: 0;
   font-family: trap-thin;
   font-size: clamp(.7rem, 3vw, .9375rem);
   line-height: 1.5;
 }
 
+.title-anim {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  opacity: 0;
+}
+
 .about .about-container {
   width: min(840px, 100%);
+  clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
 }
 
 .about .about-title {
@@ -313,6 +323,7 @@ main .main-bottom-text {
 
 .about .about-text {
   opacity: .2;
+  opacity: 1;
   margin-bottom: 1.5rem;
   font-size: clamp(.7rem, 3vw, .9375rem);
 }
@@ -394,6 +405,20 @@ main .main-bottom-text {
 .contact-container button:hover, .contact-container button:focus {
   color: #0f7173;
   box-shadow: inset 15em 0 #e7ecef;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer h1 {
+  opacity: .2;
+  font-size: clamp(.4rem, 3vw, .8rem);
 }
 
 /*# sourceMappingURL=index.31af9f67.css.map */

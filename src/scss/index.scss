@@ -15,6 +15,7 @@ body {
   overflow-x: hidden;
   color: $secondaryClr;
   font-family: trap-regular;
+  position: relative;
 
   cursor: url("../../assets/path789.svg"), auto;
 }
@@ -151,6 +152,7 @@ main {
 
   .about-text {
     @include sectionContentText;
+    opacity: 1;
   }
 
   .open-modal {
@@ -218,5 +220,19 @@ main {
       box-shadow: inset 15em 0 0 0 $secondaryClr;
       color: $accentClr;
     }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  h1 {
+    font-size: clamp(0.4rem, 3vw, 0.8rem);
+    opacity: 0.2;
   }
 }
