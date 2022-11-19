@@ -135,19 +135,19 @@ li > a {
 
 @font-face {
   font-family: trap-bold;
-  src: url(/font/Trap-Bold.otf);
+  src: url(/src/font/Trap-Bold.otf);
 }
 @font-face {
   font-family: trap-medium;
-  src: url(/font/Trap-Medium.otf);
+  src: url(/src/font/Trap-Medium.otf);
 }
 @font-face {
   font-family: trap-regular;
-  src: url(/font/Trap-Regular.otf);
+  src: url(/src/font/Trap-Regular.otf);
 }
 @font-face {
   font-family: trap-thin;
-  src: url(/font/Trap-Light.otf);
+  src: url(/src/font/Trap-Light.otf);
 }
 @media (width > 37.5rem) {
   .main-bottom-text {
@@ -168,7 +168,8 @@ li > a {
     color: #e7ecef;
     font-size: 1.5rem;
   }
-  .menu-bar:hover, .menu-bar:focus {
+  .menu-bar:hover,
+  .menu-bar:focus {
     color: #0f7173;
   }
   .primary-nav {
@@ -249,7 +250,7 @@ body {
   overflow-x: hidden;
   color: #e7ecef;
   font-family: trap-regular;
-  cursor: url("../../assets/path789.svg"), auto;
+  position: relative;
 }
 
 .scroll-down header {
@@ -300,10 +301,12 @@ li > a::before {
   position: absolute;
   transition: width 0.6s cubic-bezier(0.15, 1, 0.4, 1);
 }
-li > a:hover, li > a:focus {
+li > a:hover,
+li > a:focus {
   color: #0f7173;
 }
-li > a:hover::before, li > a:focus::before {
+li > a:hover::before,
+li > a:focus::before {
   width: 100%;
   right: auto;
 }
@@ -386,6 +389,7 @@ main .main-bottom-text {
   font-size: clamp(0.7rem, 3vw, 0.9375rem);
   opacity: 20%;
   margin-bottom: 1.5rem;
+  opacity: 1;
 }
 .about .open-modal {
   color: #e7ecef;
@@ -452,9 +456,23 @@ main .main-bottom-text {
   transition: all 0.5s ease-in-out;
   font-family: trap-medium;
 }
-.contact-container button:hover, .contact-container button:focus {
+.contact-container button:hover,
+.contact-container button:focus {
   box-shadow: inset 15em 0 0 0 #e7ecef;
   color: #0f7173;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer h1 {
+  font-size: clamp(0.4rem, 3vw, 0.8rem);
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=index.css.map */
