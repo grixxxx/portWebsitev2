@@ -208,7 +208,7 @@ li > a {
   }
 }
 .card {
-  max-width: 200px;
+  max-width: 300px;
   background-color: #272932;
   padding: 1.5rem;
   border-radius: 10px;
@@ -340,7 +340,7 @@ main {
   user-select: none;
 }
 main .main-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
 }
 main .main-top-text {
   font-size: clamp(clamp(0.7rem, 3vw, 0.9375rem), 2vw, 1.606875rem);
@@ -376,7 +376,7 @@ main .main-bottom-text {
 }
 
 .about .about-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
   clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
 }
 .about .about-title {
@@ -423,14 +423,14 @@ main .main-bottom-text {
 
 .project-container {
   display: flex;
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .contact-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
 }
 .contact-container .contact-title {
   font-family: trap-bold;

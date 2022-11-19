@@ -128,7 +128,7 @@ li > a {
 }
 
 .card {
-  max-width: 200px;
+  max-width: 300px;
   background-color: #272932;
   border-radius: 10px;
   padding: 1.5rem;
@@ -269,7 +269,7 @@ main {
 }
 
 main .main-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
 }
 
 main .main-top-text {
@@ -310,7 +310,7 @@ main .main-bottom-text {
 }
 
 .about .about-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
   clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
 }
 
@@ -364,7 +364,7 @@ main .main-bottom-text {
 }
 
 .project-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
@@ -372,7 +372,7 @@ main .main-bottom-text {
 }
 
 .contact-container {
-  width: min(840px, 100%);
+  width: min(70rem, 100%);
 }
 
 .contact-container .contact-title {
