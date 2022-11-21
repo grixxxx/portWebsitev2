@@ -1,9 +1,10 @@
 @forward "./resets";
+@forward "./media-queries";
+@forward "./cards";
+
 @use "./variables" as *;
 @use "./fonts" as *;
 @use "./mixins" as *;
-@forward "./media-queries";
-@forward "./cards";
 
 html {
   scroll-behavior: smooth;
@@ -16,8 +17,6 @@ body {
   color: $secondaryClr;
   font-family: trap-regular;
   position: relative;
-
-  cursor: url("../../assets/path789.svg"), auto;
 }
 
 .scroll-down header {
@@ -100,6 +99,7 @@ main {
 
   .main-container {
     width: $sectionContainerWidth;
+    transform: translateY(100px);
   }
 
   .main-top-text {

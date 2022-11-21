@@ -23,16 +23,13 @@ window.addEventListener("scroll", ()=>{
     lastScroll = currentScroll;
     console.log(currentScroll);
 });
-const primaryNav = document.querySelector("#primary-nav");
-const primaryNavItem = document.querySelectorAll(".primary-nav-item");
+const primaryNav = document.getElementById("primary-nav");
 const menuBar = document.querySelector(".menu-bar");
 menuBar.addEventListener("click", ()=>{
     primaryNav.classList.toggle("active");
 });
-primaryNavItem.forEach((navItem)=>{
-    navItem.addEventListener("click", ()=>{
-        primaryNav.classList.toggle("active");
-    });
+primaryNav.addEventListener("click", ()=>{
+    primaryNav.classList.toggle("active");
 });
 
 //# sourceMappingURL=index.de5c0784.js.map
