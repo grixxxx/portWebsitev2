@@ -6,7 +6,10 @@
   background-color: $primaryClr;
   padding: $gap;
   border-radius: 10px;
-  box-shadow: 1.5px 1.5px 10px rgba(255, 255, 255, 0.034);
+  border: 1px solid #ffffff0c;
+
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  opacity: 0;
 
   & > *:not(.card--link) {
     margin-bottom: 0.5rem;
@@ -15,6 +18,7 @@
   .card-title {
     font-family: trap-bold;
     font-size: $fontmdm;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
 
   .card--text {
@@ -37,6 +41,19 @@
 
     i {
       font-size: $fontmdm;
+    }
+  }
+
+  .toolContainer {
+    display: flex;
+    gap: 0.5rem;
+
+    h3 {
+      font-size: 0.7rem;
+      background-color: #284b63;
+      padding: 0.1rem 0.4rem;
+      opacity: 0.5;
+      border-radius: 7px;
     }
   }
 }

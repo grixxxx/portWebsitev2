@@ -37,26 +37,6 @@ li > a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: trap-bold;
-  src: url("Trap-Bold.07b2f746.otf");
-}
-
-@font-face {
-  font-family: trap-medium;
-  src: url("Trap-Medium.883eddc3.otf");
-}
-
-@font-face {
-  font-family: trap-regular;
-  src: url("Trap-Regular.68a58491.otf");
-}
-
-@font-face {
-  font-family: trap-thin;
-  src: url("Trap-Light.389eb60e.otf");
-}
-
 @media (min-width: calc(37.5rem + .001px)) {
   .main-bottom-text {
     text-align: end;
@@ -127,12 +107,34 @@ li > a {
   }
 }
 
+@font-face {
+  font-family: trap-bold;
+  src: url("Trap-Bold.07b2f746.otf");
+}
+
+@font-face {
+  font-family: trap-medium;
+  src: url("Trap-Medium.883eddc3.otf");
+}
+
+@font-face {
+  font-family: trap-regular;
+  src: url("Trap-Regular.68a58491.otf");
+}
+
+@font-face {
+  font-family: trap-thin;
+  src: url("Trap-Light.389eb60e.otf");
+}
+
 .card {
   max-width: 300px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  opacity: 0;
   background-color: #272932;
+  border: 1px solid #ffffff0c;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 1.5px 1.5px 10px #ffffff09;
 }
 
 .card > :not(.card--link) {
@@ -140,6 +142,7 @@ li > a {
 }
 
 .card .card-title {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   font-family: trap-bold;
   font-size: 1.25rem;
 }
