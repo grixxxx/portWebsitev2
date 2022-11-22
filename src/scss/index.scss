@@ -20,27 +20,36 @@ body {
 }
 
 .scroll-down header {
+  -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
 
 .scroll-up header {
+  -webkit-box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.082);
   box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.082);
   padding-block: 1rem;
+  background-color: transparent;
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   padding-block: 1.9942rem;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  background-color: $primaryClr;
 }
 
 section {
   @include paddingsection;
   @include flex;
   line-height: $lineHeight;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 
   .section-title {
@@ -62,6 +71,8 @@ li > a {
     right: 0;
     width: 0;
     position: absolute;
+    -webkit-transition: width 0.6s cubic-bezier(0.15, 1, 0.4, 1);
+    -o-transition: width 0.6s cubic-bezier(0.15, 1, 0.4, 1);
     transition: width 0.6s cubic-bezier(0.15, 1, 0.4, 1);
   }
 
@@ -82,6 +93,8 @@ ul {
 
 nav {
   @include flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-inline: $paddinginlinesection;
   position: sticky;
@@ -94,11 +107,19 @@ nav {
 main {
   @include flex;
   @include paddingsection;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 
   .main-container {
     width: $sectionContainerWidth;
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
     transform: translateY(100px);
   }
 
@@ -130,6 +151,7 @@ main {
     opacity: $opacity50;
     font-family: trap-thin;
     font-size: $fontsmll;
+    -webkit-clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
 
     opacity: 0;
@@ -137,6 +159,7 @@ main {
 }
 
 .title-anim {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   opacity: 0;
 }
@@ -144,6 +167,7 @@ main {
 .about {
   .about-container {
     width: $sectionContainerWidth;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
     clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
   }
   .about-title {
@@ -152,16 +176,18 @@ main {
 
   .about-text {
     @include sectionContentText;
-    opacity: 1;
   }
 
   .open-modal {
     @include sectionBtn;
     font-size: $fontsmll;
     padding: 0.8rem 1.5rem;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
     transition: 0.3s ease-in;
 
     &:hover {
+      -webkit-box-shadow: inset 20em 0 0 0 $secondaryClr;
       box-shadow: inset 20em 0 0 0 $secondaryClr;
       color: $accentClr;
     }
@@ -179,6 +205,10 @@ main {
       right: 2rem;
     }
   }
+  .modal-dialog::-webkit-backdrop {
+    background: $accentClr;
+    opacity: 0.4;
+  }
   .modal-dialog::backdrop {
     background: $accentClr;
     opacity: 0.4;
@@ -186,9 +216,14 @@ main {
 }
 
 .project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: $sectionContainerWidth;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -212,11 +247,14 @@ main {
     @include sectionBtn;
     font-size: clamp(40%, 4vw, $fontlrg);
     padding: 1rem 2rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     font-family: trap-medium;
 
     &:hover,
     &:focus {
+      -webkit-box-shadow: inset 15em 0 0 0 $secondaryClr;
       box-shadow: inset 15em 0 0 0 $secondaryClr;
       color: $accentClr;
     }
