@@ -28,8 +28,7 @@ gsap.to(".about-container", {
 gsap.to(".card", {
     scrollTrigger: {
         trigger: "#about",
-        start: "center center",
-        markers: true
+        start: "center center"
     },
     opacity: 1,
     duration: 1.5,
