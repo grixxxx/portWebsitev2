@@ -16,7 +16,7 @@ gsap.to(".title-anim", {
 gsap.to(".main-bottom-text", {
     "clip-path": "polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)",
     duration: 2,
-    opacity: 1,
+    opacity: 0.5,
     delay: 1
 });
 gsap.to(".about-container", {
@@ -25,13 +25,28 @@ gsap.to(".about-container", {
     opacity: 1,
     delay: 1
 });
-gsap.from("#project", {
+gsap.to(".card", {
     scrollTrigger: {
-        trigger: "#project",
-        start: "center bottom"
+        trigger: "#about",
+        start: "center center",
+        markers: true
     },
-    x: 200,
-    opacity: 0
+    opacity: 1,
+    duration: 1.5,
+    stagger: 0.4,
+    "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+    y: 0
+});
+gsap.to(".card-title", {
+    scrollTrigger: {
+        trigger: "#about",
+        start: "center center"
+    },
+    opacity: 1,
+    duration: 1.5,
+    stagger: 0.2,
+    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    delay: 1
 });
 
 //# sourceMappingURL=index.09c24910.js.map

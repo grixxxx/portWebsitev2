@@ -37,26 +37,6 @@ li > a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: trap-bold;
-  src: url("Trap-Bold.07b2f746.otf");
-}
-
-@font-face {
-  font-family: trap-medium;
-  src: url("Trap-Medium.883eddc3.otf");
-}
-
-@font-face {
-  font-family: trap-regular;
-  src: url("Trap-Regular.68a58491.otf");
-}
-
-@font-face {
-  font-family: trap-thin;
-  src: url("Trap-Light.389eb60e.otf");
-}
-
 @media (min-width: calc(37.5rem + .001px)) {
   .main-bottom-text {
     text-align: end;
@@ -80,13 +60,15 @@ li > a {
     display: block;
   }
 
-  .menu-bar:hover, .menu-bar:focus {
+  .menu-bar:active {
     color: #0f7173;
   }
 
   .primary-nav {
     width: 100%;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    -o-transition: 1s ease-in-out;
     z-index: -1;
     flex-direction: column;
     padding-top: 2rem;
@@ -127,12 +109,35 @@ li > a {
   }
 }
 
+@font-face {
+  font-family: trap-bold;
+  src: url("Trap-Bold.07b2f746.otf");
+}
+
+@font-face {
+  font-family: trap-medium;
+  src: url("Trap-Medium.883eddc3.otf");
+}
+
+@font-face {
+  font-family: trap-regular;
+  src: url("Trap-Regular.68a58491.otf");
+}
+
+@font-face {
+  font-family: trap-thin;
+  src: url("Trap-Light.389eb60e.otf");
+}
+
 .card {
   max-width: 300px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  opacity: 0;
   background-color: #272932;
+  border: 1px solid #ffffff0c;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 1.5px 1.5px 10px #ffffff09;
+  transform: translateY(50px);
 }
 
 .card > :not(.card--link) {
@@ -140,6 +145,7 @@ li > a {
 }
 
 .card .card-title {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   font-family: trap-bold;
   font-size: 1.25rem;
 }
@@ -155,6 +161,7 @@ li > a {
 
 .card .card--link a {
   color: #e7ecef;
+  -o-transition: color .3s ease;
   margin-right: 1.5rem;
   transition: color .3s;
 }
@@ -178,6 +185,7 @@ li > a {
   border-radius: 7px;
   padding: .1rem .4rem;
   font-size: .7rem;
+  box-shadow: 2px 2px 2px #0f2224;
 }
 
 html {
@@ -198,13 +206,17 @@ body {
 }
 
 .scroll-up header {
+  background-color: #0000;
   padding-block: 1rem;
   box-shadow: 1px 1px 20px #ffffff15;
 }
 
 header {
   z-index: 9999;
+  -o-transition: all .5s ease;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  background-color: #272932;
   padding-block: 1.9942rem;
   transition: all .5s;
   position: sticky;
@@ -236,6 +248,7 @@ li > a:before {
   content: "";
   height: 1px;
   width: 0;
+  -o-transition: width .6s cubic-bezier(.15, 1, .4, 1);
   background-color: #0f7173;
   transition: width .6s cubic-bezier(.15, 1, .4, 1);
   position: absolute;
@@ -337,14 +350,14 @@ main .main-bottom-text {
 
 .about .about-text {
   opacity: .2;
-  opacity: 1;
   margin-bottom: 1.5rem;
-  font-size: clamp(.7rem, 3vw, .9375rem);
+  font-size: 1.25rem;
 }
 
 .about .open-modal {
   color: #e7ecef;
   cursor: pointer;
+  -o-transition: .3s ease-in;
   background-color: #0f7173;
   border: none;
   padding: .8rem 1.5rem;
@@ -408,6 +421,7 @@ main .main-bottom-text {
 .contact-container button {
   color: #e7ecef;
   cursor: pointer;
+  -o-transition: all .5s ease-in-out;
   background-color: #0f7173;
   border: none;
   padding: 1rem 2rem;
