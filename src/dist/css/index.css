@@ -225,6 +225,7 @@ li > a {
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.0470588235);
+  transition: 500ms ease;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   opacity: 0;
@@ -273,6 +274,9 @@ li > a {
   border-radius: 7px;
   -webkit-box-shadow: 2px 2px 2px #0f2224;
   box-shadow: 2px 2px 2px #0f2224;
+}
+.card:hover {
+  border: 0.1px solid rgba(255, 255, 255, 0.199);
 }
 
 html {
