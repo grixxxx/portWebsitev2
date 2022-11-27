@@ -7,6 +7,7 @@
   padding: $gap;
   border-radius: 10px;
   border: 1px solid #ffffff0c;
+  transition: 500ms ease;
 
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 
@@ -66,5 +67,9 @@
       -webkit-box-shadow: 2px 2px 2px #0f2224;
       box-shadow: 2px 2px 2px #0f2224;
     }
+  }
+
+  &:hover {
+    border: 0.1px solid rgba(255, 255, 255, 0.199);
   }
 }

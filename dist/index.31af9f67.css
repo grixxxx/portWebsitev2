@@ -137,6 +137,7 @@ li > a {
   border: 1px solid #ffffff0c;
   border-radius: 10px;
   padding: 1.5rem;
+  transition: all .5s;
   transform: translateY(50px);
 }
 
@@ -186,6 +187,10 @@ li > a {
   padding: .1rem .4rem;
   font-size: .7rem;
   box-shadow: 2px 2px 2px #0f2224;
+}
+
+.card:hover {
+  border: .1px solid #fff3;
 }
 
 html {
