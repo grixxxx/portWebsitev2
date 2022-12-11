@@ -18,9 +18,14 @@
   src: url(/src/font/Trap-Light.otf);
 }
 
+@font-face {
+  font-family: trap-extraBold;
+  src: url(/font/Trap-Black.otf);
+}
+
 $fontsmll: clamp(0.7rem, 3vw, 0.9375rem);
 $fontmdm: 1.25rem;
-$fontlrg: 1.606875rem;
+$fontlrg: 1.5625rem;
 $fontxlrg: 3.905625rem;
 
 $lineHeight: 1.5;

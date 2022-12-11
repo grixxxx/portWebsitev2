@@ -1,9 +1,10 @@
 @use "./variables" as *;
 @use "./fonts" as *;
 
-@mixin flex {
+@mixin flex($justify, $align-items, $gap) {
   display: flex;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align-items;
   gap: $gap;
 }
 
@@ -13,26 +14,30 @@
 }
 
 @mixin sectionTitle {
-  font-family: trap-bold;
-  font-size: clamp($fontsmll, 5vw, $fontlrg);
+  color: $secondAccentClr;
+}
+@mixin sectionSubtitle {
+  font-size: clamp(1.1rem, 5vw, 1.5625rem);
+  -webkit-text-stroke: 1px $secondaryClr;
+  color: transparent;
 }
 
 @mixin sectionContentTitle {
-  font-family: trap-bold;
-  font-size: clamp($fontsmll, 5vw, $fontlrg);
+  font-family: trap-medium;
+  font-size: clamp($fontsmll, 3vw, $fontlrg);
   max-width: 35rem;
   margin-bottom: $gap;
 }
 
 @mixin sectionContentText {
-  font-size: $fontmdm;
+  font-size: $fontsmll;
   opacity: $opacity50;
   margin-bottom: $gap;
 }
 
 @mixin sectionBtn {
   color: $secondaryClr;
-  background-color: $accentClr;
+  background-color: $textClr;
   border: none;
   font-family: trap-thin;
   cursor: pointer;

@@ -54,89 +54,91 @@
             ></a>
           </li>
         </ul>
-        <a class="menu-bar" href="#">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-menu menu-menu"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </a>
+        <button class="hamburger menu-bar hamburger--vortex-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
         <ul class="primary-nav" id="primary-nav">
           <li class="primary-nav-item nav-items">
-            <a href="#about">ABOUT</a>
+            <a href="#about">about.</a>
           </li>
           <li class="primary-nav-item nav-items">
-            <a href="#project">PROJECTS</a>
+            <a href="#project">works.</a>
           </li>
-          <li class="primary-nav-item nav-items">
-            <a href="#contact">CONTACT</a>
+          <li class="primary-nav-item nav-items active">
+            <a href="#contact">contact.</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="main-container title-anim" id="mainContainer">
-        <p class="main-top-text">Hello World, I am</p>
-        <h1 class="main-title">
-          Delmer John Ballesteros <img src="./assets/path851.png" alt="" />
-        </h1>
-        <p class="main-title-pos">
-          Front-End Web Developer based in Isabela, Philippines.
-        </p>
+        <div class="main-title-container">
+          <h1 class="main-title">
+            Delmer John Ballesteros<span>Delmer John Ballesteros</span>
+          </h1>
+          <div class="main-button-container">
+            <a href="#project">
+              <button class="main-button work-button">MY WORKS</button></a
+            ><a href=""
+              ><button class="main-button resume-button">RESUME</button></a
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="main-bottom-container">
+          <p class="main-title-pos">
+            Front-End Developer based in Isabela, Philippines.
+          </p>
+          <p class="main-bottom-text">
+            I'm passionate about making things and even more committed to making
+            them better.
+          </p>
+        </div>
       </div>
-      <p class="main-bottom-text">
-        I'm passionate about making things and even more committed to making
-        them better.
-      </p>
     </main>
 
-    <section class="about" id="about">
-      <h1 class="section-title title-anim">ABOUT</h1>
-      <div class="about-container">
-        <h2 class="about-title">
-          My goal is to create web experiences that are surprising, interesting,
-          and memorable.
-        </h2>
-        <p class="about-text">
-          Front-end Web Developer based in Isabela, Philippines. I develop,
-          maintain and optimize responsive websites for all industries. I am
-          also running an undergraduate course at one of the universities in
-          Isabela, Philippines.
-        </p>
-        <button class="open-modal">More Information</button>
+    <section class="service">
+      <div class="section-title-container">
+        <h1 class="section-title">SERVICE.</h1>
+        <p class="section-subtitle">WHAT I CAN DO</p>
+      </div>
 
-        <dialog class="modal-dialog">
-          <img
-            src="https://images.unsplash.com/photo-1531913223931-b0d3198229ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cmVzdW1lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <button class="close-modal">X</button>
-        </dialog>
+      <div class="card-container">
+        <article class="project-card">
+          <h2 class="card-title">Web Development</h2>
+          <p class="card-text">
+            Have a new, modern website made that is easy to find! Let’s build
+            scalable website that seamlessly fit with design.
+          </p>
+        </article>
+        <article class="project-card">
+          <h2 class="card-title">IT Assistance</h2>
+          <p class="card-text">
+            Need short-term computer help? I come to your location to solve all
+            your problems.
+          </p>
+        </article>
       </div>
     </section>
+
     <section class="project" id="project">
-      <h1 class="section-title">PROJECTS</h1>
+      <div class="section-title-container">
+        <h1 class="section-title">WORKS.</h1>
+        <p class="section-subtitle">FEATURED PROJECTS</p>
+      </div>
 
       <div class="project-container">
-        <article class="card">
-          <h2 class="card-title">Random Password Generator</h2>
+        <article class="project-card">
           <div class="toolContainer">
             <h3>HTML</h3>
             <h3>SCSS</h3>
             <h3>JS</h3>
             <h3>PARCEL</h3>
           </div>
+          <h2 class="card-title">Random Password Generator</h2>
           <p class="card--text">
             Create strong, random passwords that are easy to remember, short,
             and contain all the required characters.
@@ -147,20 +149,39 @@
               target="_blank"
               ><i class="fa-brands fa-github"></i
             ></a>
-            <a
-              href="https://password-generator-by-djb.netlify.app/"
-              target="_blank"
+            <a href="https://securus.netlify.app" target="_blank"
               ><i class="fa-solid fa-up-right-from-square"></i
             ></a>
           </div>
         </article>
-        <article class="card">
-          <h2 class="card-title">Calculator</h2>
+        <article class="project-card">
           <div class="toolContainer">
             <h3>HTML</h3>
             <h3>SCSS</h3>
             <h3>JS</h3>
           </div>
+          <h2 class="card-title">noted. - simple notepad for everyone</h2>
+          <p class="card--text">
+            It is the simple and quick note helps you organize your important
+            tasks.
+          </p>
+          <div class="card--link">
+            <a href="https://github.com/grixxxx/Simple-Todo-List.git"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://noted.pages.dev" target="_blank"
+              ><i class="fa-solid fa-up-right-from-square"></i
+            ></a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="toolContainer">
+            <h3>HTML</h3>
+            <h3>SCSS</h3>
+            <h3>JS</h3>
+          </div>
+          <h2 class="card-title">Calculator</h2>
+
           <p class="card--text">
             This basic online calculator resembles a small handheld calculator
             and includes the standard four functions of addition, subtraction,
@@ -177,33 +198,16 @@
             ></a>
           </div>
         </article>
-        <article class="card">
-          <h2 class="card-title">Simple Task List</h2>
-          <div class="toolContainer">
-            <h3>HTML</h3>
-            <h3>SCSS</h3>
-            <h3>JS</h3>
-          </div>
-          <p class="card--text">
-            It is the simple and quick note helps you organize your important
-            tasks.
-          </p>
-          <div class="card--link">
-            <a href="https://github.com/grixxxx/Simple-Todo-List.git"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a href="https://task-list-by-djb.netlify.app/"
-              ><i class="fa-solid fa-up-right-from-square"></i
-            ></a>
-          </div>
-        </article>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <h1 class="section-title">CONTACT</h1>
+      <div class="section-title-container">
+        <h1 class="section-title">CONTACT</h1>
+        <p class="section-subtitle">KEEP IN TOUCH WITH ME</p>
+      </div>
+
       <div class="contact-container">
-        <h2 class="contact-title">keep in touch with me</h2>
         <p class="contact-text">
           For business inquiries and collaborations please email me and leave a
           link to your website or portfolio. I am looking forward to hearing

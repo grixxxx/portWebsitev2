@@ -1,20 +1,41 @@
 @use "./variables" as *;
 @use "./fonts" as *;
+@use "./mixins" as *;
 
-.card {
-  max-width: 300px;
-  background-color: $primaryClr;
-  padding: $gap;
-  border-radius: 10px;
-  border: 1px solid #ffffff0c;
+.card-container {
+  @include flex(center, none, $gap);
+
+  .card {
+    background-color: $accentClr;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
+    max-width: 23rem;
+    border: 1px solid hsla(150, 11%, 27%, 1);
+    padding: 2em;
+    border-radius: 0.3125rem;
+  }
+
+  .card-title {
+    font-size: 1.875rem;
+  }
+
+  .card-text {
+    color: $fadeClr;
+  }
+}
+
+.project-container {
+  @include flex(center, center, $gap);
+  flex-wrap: wrap;
+}
+.project-card {
   transition: 500ms ease;
-
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   opacity: 0;
-
   transform: translateY(50px);
+  max-width: 30rem;
+  border: 1px solid $fadeClr;
+  padding: 2rem 3rem;
 
   & > *:not(.card--link) {
     margin-bottom: 0.5rem;
@@ -22,9 +43,9 @@
 
   .card-title {
     font-family: trap-bold;
-    font-size: $fontmdm;
     -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    font-size: $fontlrg;
   }
 
   .card--text {
@@ -43,7 +64,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: $accentClr;
+        color: $secondAccentClr;
       }
     }
 
@@ -59,17 +80,10 @@
     gap: 0.5rem;
 
     h3 {
-      font-size: 0.7rem;
-      background-color: #284b63;
+      font-size: 0.5rem;
+      background-color: #19231d;
       padding: 0.1rem 0.4rem;
-      opacity: 0.5;
-      border-radius: 7px;
-      -webkit-box-shadow: 2px 2px 2px #0f2224;
-      box-shadow: 2px 2px 2px #0f2224;
+      color: $fadeClr;
     }
-  }
-
-  &:hover {
-    border: 0.1px solid rgba(255, 255, 255, 0.199);
   }
 }

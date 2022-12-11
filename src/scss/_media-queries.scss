@@ -2,10 +2,7 @@
 
 @media (width > 37.5rem) {
   .main-bottom-text {
-    -ms-flex-item-align: end;
-    align-self: flex-end;
     text-align: end;
-    margin-top: 2rem;
   }
 }
 
@@ -21,7 +18,7 @@
   }
 
   .menu-bar {
-    display: block;
+    visibility: visible;
     color: $secondaryClr;
     font-size: 1.5rem;
 
@@ -35,29 +32,25 @@
     top: -1500%;
     left: 0;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    -webkit-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
-    padding-top: 2rem;
+    padding-top: 10rem;
     z-index: -1;
+    height: 100vh;
+    background-color: $primaryClr;
 
     & > li {
-      padding-bottom: 2rem;
+      padding-block: 3rem;
+      font-size: 3rem;
     }
 
     &.active {
-      top: 60px;
+      top: 0;
     }
   }
 
   main .main-container > * {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .contact-container {
@@ -65,17 +58,28 @@
   }
 }
 @media (width > 600px) {
-  .project {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-
-    .section-title {
-      text-align: end;
-    }
-  }
   .menu-bar {
-    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (width <62rem) {
+  main .main-title-container,
+  .card-container {
+    flex-direction: column;
+    gap: $gap;
+  }
+  main .main-button-container {
+    flex-direction: row !important;
+    max-width: none !important;
+  }
+
+  main .main-bottom-container {
+    flex-direction: column;
+
+    .main-bottom-text {
+      text-align: left;
+      max-width: 60ch;
+    }
   }
 }
