@@ -6,7 +6,7 @@
   "scripts": {
     "build:sass": "sass  --no-source-map src/dist/css",
     "watch:sass": "sass ./src/sass/main.scss ./src/css/main.css -w",
-    "start": "parcel ./src/index.html",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "keywords": [],
