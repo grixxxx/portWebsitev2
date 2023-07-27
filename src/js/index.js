@@ -44,6 +44,8 @@ var forEach = function (t, o, r) {
   else for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t);
 };
 
+
+
 var hamburgers = document.querySelectorAll(".hamburger");
 if (hamburgers.length > 0) {
   forEach(hamburgers, function (hamburger) {

@@ -189,7 +189,7 @@ li > a {
 }
 @media (width < 62rem) {
   main .main-title-container,
-.card-container {
+  .card-container {
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -235,7 +235,7 @@ li > a {
   background-color: #293a31;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
   max-width: 23rem;
-  border: 1px solid hsl(150deg, 11%, 27%);
+  border: 1px solid hsl(150, 11%, 27%);
   padding: 2em;
   border-radius: 0.3125rem;
 }

@@ -4,18 +4,21 @@
   "description": "",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html",
+    "build:sass": "sass  --no-source-map src/dist/css",
+    "watch:sass": "sass ./src/sass/main.scss ./src/css/main.css -w",
+    "start": "parcel ./src/index.html",
     "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.7.0",
-    "sass": "^1.55.0"
+    "parcel": "^2.9.3",
+    "sass": "^1.64.1",
+    "tailwindcss": "^3.3.3"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.13",
-    "lottie-web": "^5.9.6"
+    "autoprefixer": "^10.4.14",
+    "sass": "^1.64.1"
   }
 }
